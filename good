@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int escolha, alcool, gasolina, diesel;
+
+		alcool = 0;
+		gasolina = 0;
+		diesel = 0;
+		escolha = 0;
+
+		while (escolha != 4) {
+
+			System.out.println("Escolha o combustível:");
+			System.out.println("1 - Álcool;");
+			System.out.println("2 - Gasolina;");
+			System.out.println("3 - Diesel; ou");
+			System.out.println();
+			System.out.println("4 - Encerrar pesquisa.");
+			escolha = sc.nextInt();
+			System.out.println();
+
+			switch (escolha) {
+			case 1:
+				alcool = alcool + 1;
+				break;
+			case 2:
+				gasolina = gasolina + 1;
+				break;
+			case 3:
+				diesel = diesel + 1;
+				break;
+			case 4:
+				escolha = 4;
+				break;
+			default:
+				System.out.println("Código inválido!");
+				System.out.println("Tente denovo.");
+				System.out.println();
+			}
+		}
+
+		System.out.println("MUITO OBRIGADO!");
+		System.out.println();
+		System.out.println("******* RESULTADO DA PESQUISA *******");
+		System.out.println("Álcool: " + alcool);
+		System.out.println("Gasolina: " + gasolina);
+		System.out.println("Diesel: " + diesel);
+
+		sc.close();
+	}
+}
